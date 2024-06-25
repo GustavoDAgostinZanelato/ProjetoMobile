@@ -1,0 +1,40 @@
+SUMÁRIO DO PROJETO
+
+1. AppNavigator.js - funcionamento do BottomTab e estilização dos botões, que redireciona o user para as outras páginas
+2. color.js        - todas as cores e fontes presentes no app foram declaradas nesse documento
+
+
+PÁGINA INÍCIO
+// é composta por 6 principais arquivos
+1. AudioList.js       - criar um componente em React Native chamado "AudioList", que exibe uma lista de itens de áudio usando "RecyclerListView"
+2. OptionsModal.js    - a função "OptionModal" exibe opções relacionadas a um item de áudio, como o nome do arquivo e opções para interação, como "Adicionar à playlist"
+3. AudioListItem.js   - a função "AudioListItem" em React Native é responsável por renderizar cada item de uma lista de áudios na tela do aplicativo
+4. Screen.js          - configurações gerais para as páginas. Usada em Player.js e AudioList.js
+5. AudioProvider.js   - solicitar permissões para acessar os arquivos de áudio, além de armazena-los no estado "audioFiles". Usada em AudioList.js e PlayList.js
+6. audioController.js - configura a ação dos botões de play, pause e retomar a música. Nele, temos um outro arquivo: 
+   '------> helper.js - "storeAudioForNextOpening" utiliza o AsyncStorage para armazenar informações do áudio de modo que o aplicativo possa recuperá-las na próxima abertura
+
+
+
+PÁGINA PLAYER
+// é composta por 6 principais arquivos
+1. Player.js          - condigurações do slide, botoes de play/avanças/retroceder e informações sobre a playlist
+2. Screen.js          - configurações gerais para as páginas. Usada em Player.js e AudioList.js
+3. AudioProvider.js   - solicitar permissões para acessar os arquivos de áudio, além de armazena-los no estado "audioFiles". Usada em AudioList.js e PlayList.js
+4. PlayerButton.js    - define a função dos botões play, pause, next e prev do arquivo Player.js
+5. audioController.js - configura a ação dos botões de play, pause e retomar a música
+6. helper.js          - "storeAudioForNextOpening" utiliza o AsyncStorage para armazenar informações do áudio de modo que o aplicativo possa recuperá-las na próxima abertura
+
+
+
+PÁGINA BIBLIOTECA
+// é composta por 4 principais arquivos
+1. PlayList.js           - responsável por armazenar as informações das novas playlist dentro da biblioteca AsyncStorage
+2. PlayListModalInput.js - lógica por tras da criação da nova PlayList. Definição do campo de "Nome" e mensagens de erro
+3. PlayListDetails.js    - cada playlist tem um Array com suas músicas. Aqui, essas músicas são renderizadas na tela
+4. AudioProvider.js      - solicitar permissões para acessar os arquivos de áudio, além de armazena-los no estado "audioFiles". Usada em AudioList.js e PlayList.js
+
+
+
+
+
